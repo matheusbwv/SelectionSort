@@ -1,0 +1,33 @@
+//SELECTIONSORT -> COM SAIDA DESORGANIZADA
+
+
+// Lista de livros
+const livros = require('./listasLivros');
+
+// Ordenar a lista de livros do maior para o menor preço
+function ordenarPorMaiorPreco(livros) {
+  livros.sort(function (a, b) {
+    return b.preco - a.preco;
+  });
+}
+
+// Ordenar a lista de livros do menor para o maior preço
+function ordenarPorMenorPreco(livros) {
+  livros.sort(function (a, b) {
+    return a.preco - b.preco;
+  });
+}
+
+// Ordenar a lista de livros do maior para o menor preço
+ordenarPorMaiorPreco(livros);
+
+// Exibir a lista de livros ordenada do maior para o menor preço
+console.log('Lista de livros ordenada do maior para o menor preço:');
+console.log('preços: \n' , livros);
+
+// Ordenar a lista de livros do menor para o maior preço
+ordenarPorMenorPreco(livros);
+
+// Exibir a lista de livros ordenada do menor para o maior preço
+console.log('Lista de livros ordenada do menor para o maior preço:');
+console.log('precos: \n' , livros);
